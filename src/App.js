@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce(item => {this.videoSearch(item)}, 500)
+    const videoSearch = _.debounce(item => {this.videoSearch(item)}, 800)
     return (
       <div className="container text-center">
         <h3>My Youtube App</h3>
