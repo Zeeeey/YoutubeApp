@@ -6,9 +6,6 @@ import YTSearch from 'youtube-api-search'
 import VideoList from './components/video-list';
 import VideoDetail from './components/video-detail';
 
-// const API_KEY = 'AIzaSyDuMiNN4F7rNdWhEQdNQ9_Q4hx2539lHns'
-const API_KEY = 'AIzaSyD1NjfrSzy23hh8KbCdR__Yr-YisomUUZY'
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -24,7 +21,7 @@ class App extends Component {
     YTSearch(
       //config option
       {
-        key: API_KEY,
+        key: process.env.REACT_APP_YOUTUBE_API_KEY,
         term: term
       },
 
@@ -34,7 +31,7 @@ class App extends Component {
           videos: videos,
           selectedVideo: videos[0]
         })
-        console.log(this.state.videos)
+        // console.log(this.state.videos)
       }
     )
   }
